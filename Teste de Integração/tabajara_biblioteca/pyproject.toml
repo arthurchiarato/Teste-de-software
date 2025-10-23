@@ -1,0 +1,8 @@
+
+[project]
+name = "tabajara-biblioteca"
+version = "0.1.0"
+
+[tool.pytest.ini_options]
+pythonpath = ["app"]
+addopts = "-q"
