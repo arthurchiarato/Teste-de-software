@@ -1,0 +1,9 @@
+
+{% extends "base.html" %}
+{% block content %}
+<div class="p-5 bg-white shadow-sm rounded-4">
+  <h1 class="mb-3">Módulo: Empréstimo & Devolução</h1>
+  <p class="text-muted">Gerencie os empréstimos da biblioteca universitária.</p>
+  <a class="btn btn-primary btn-lg" href="{{ url_for('loans_page') }}">Ir para Empréstimos</a>
+</div>
+{% endblock %}
