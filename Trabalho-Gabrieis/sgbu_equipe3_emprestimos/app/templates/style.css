@@ -1,0 +1,66 @@
+/*
+ * O arquivo base.html já inclui o Bootstrap 5.3.3, que fornece a maior parte do estilo.
+ * O CSS customizado abaixo foi extraído do "pasted_content.txt" e adaptado
+ * para manter a consistência com o framework Bootstrap.
+ *
+ * O objetivo é aplicar a paleta de cores e o estilo de borda/sombra do CSS original
+ * aos componentes Bootstrap existentes, evitando conflitos de layout.
+ */
+
+:root {
+  /* Cores primárias do CSS original (Verde Escuro) */
+  --color-primary: #006600;
+  --color-primary-hover: #004d00;
+  --border-radius: 8px;
+}
+
+/* 1. Adaptação de Cores para Componentes Bootstrap */
+
+/* Botões Primários (Sucesso no contexto do Bootstrap) */
+.btn-success, .btn-primary {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  border-radius: var(--border-radius) !important;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-success:hover, .btn-primary:hover {
+  background-color: var(--color-primary-hover) !important;
+  border-color: var(--color-primary-hover) !important;
+  transform: translateY(-1px);
+}
+
+/* Títulos */
+h1, h5 {
+  color: var(--color-primary);
+}
+
+/* 2. Adaptação de Estilo para Formulários Bootstrap */
+
+/* Campos de Formulário (input e select) */
+.form-control, .form-select {
+  border-radius: var(--border-radius);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 0.25rem rgba(0, 102, 0, 0.25); /* Sombra de foco com a cor primária */
+}
+
+/* 3. Adaptação de Estilo para Cards e Elementos de Conteúdo */
+
+/* Cards e elementos com sombra/borda */
+.card, .shadow-sm, .rounded-4 {
+  border-radius: var(--border-radius) !important;
+}
+
+/* 4. Estilo para o link "Voltar ao Menu" (simulando o .link do CSS original) */
+.btn-outline-secondary {
+  border-radius: var(--border-radius) !important;
+}
+
+/* Estilo para o container principal em index.html */
+.p-5.bg-white.shadow-sm.rounded-4 {
+  border-radius: var(--border-radius) !important;
+}
